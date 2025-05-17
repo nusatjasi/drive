@@ -2,14 +2,72 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Upload File ke Google Drive</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #2f3e46;
+    }
+
+    input[type="file"] {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      padding: 8px;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #status {
+      margin-top: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h2>Form Upload ke Google Drive</h2>
-  <input type="file" id="fileInput" />
-  <button onclick="uploadFile()">Upload</button>
-
-  <p id="status"></p>
+  <div class="container">
+    <h2>Upload File ke Google Drive</h2>
+    <input type="file" id="fileInput" />
+    <br>
+    <button onclick="uploadFile()">Upload</button>
+    <p id="status"></p>
+  </div>
 
   <script>
     async function uploadFile() {
